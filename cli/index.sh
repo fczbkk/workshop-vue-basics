@@ -1,0 +1,1 @@
+vue create my-project
