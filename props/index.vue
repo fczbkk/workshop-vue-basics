@@ -1,33 +1,38 @@
 <template>
   <div>
-    <UserDetails
-      :firstName="activeUser.firstName"
-      :lastName="activeUser.lastName"
+    <h1>Personal data</h1>
+    <personal-data
+      firstName="Riki"
+      lastName="Fridrich"
     />
-    <UserActions
-      :userId="activeUser.id"
+
+    <h1>Additional data</h1>
+    <additional-data
+      :specializations="specializations"
+      :hobbies="hobbies"
     />
   </div>
 </template>
 
 <script>
-  import UserDetails from './user-details.vue'
-  import UserActions from './user-actions.vue'
+  import PersonalData from './PersonalData.vue'
+  import AdditionalData from './AdditionalData'
 
   export default {
     components: {
-      UserDetails,
-      UserActions
+      PersonalData,
+      AdditionalData
     },
 
     data () {
       return {
-        activeUser: {
-          id: 42,
-          firstName: 'Riki',
-          lastName: 'Fridrich'
-        }
+        specializations: 'Javascript, Vue',
+        hobbies: 'cooking, reading'
       }
     }
   }
 </script>
+
+<style scoped>
+
+</style>
