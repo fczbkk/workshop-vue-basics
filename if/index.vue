@@ -1,15 +1,25 @@
 <template>
   <div>
-    <h1>Products</h1>
-    <div v-for="product in products" :key="product.id">
-      <h2>{{ product.title }}</h2>
-      <div v-if="product.isAvailable">
-        <button>Buy now!</button>
-      </div>
-      <div v-else>
-        Sorry, this product is sold out.
-      </div>
-    </div>
+
+    <h1>Controls</h1>
+    <p>
+      <label>
+        <input type="checkbox" v-model="isAvailable">
+        is available
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" v-model="hasVariants">
+        has variants
+      </label>
+    </p>
+
+    <h1>Product details</h1>
+    <p v-if="!isAvailable">This product is not available</p>
+    <p v-else-if="hasVariants">This product is available in red and blue variants.</p>
+    <p v-else>This product is available only in red.</p>
+
   </div>
 </template>
 
@@ -17,23 +27,9 @@
   export default {
     data () {
       return {
-        products: [
-          {
-            id: 't-shirt',
-            title: 'Funny t-shirt',
-            isAvailable: true
-          },
-          {
-            id: 'skirt',
-            title: 'Elegant skirt',
-            isAvailable: false
-          }
-        ]
+        isAvailable: true,
+        hasVariants: false
       }
     }
   }
 </script>
-
-<style scoped>
-
-</style>
