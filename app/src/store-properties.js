@@ -1,0 +1,3 @@
+export const SET_QUANTITY = 'SET_QUANTITY'
+export const COUNT_PRODUCTS = 'COUNT_PRODUCTS'
+export const COUNT_ITEMS = 'COUNT_ITEMS'

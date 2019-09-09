@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <p>
+      Cart:
+      <the-cart />
+    </p>
+    <p>
+      T-shirt<br>
+      <add-to-cart product-id="tshirt" />
+    </p>
+    <p>
+      T-shirt<br>
+      <add-to-cart product-id="tshirt" />
+    </p>
+    <p>
+      Hat<br>
+      <add-to-cart product-id="hat" />
+    </p>
+    <p>
+      Swimsuit<br>
+      <add-to-cart product-id="swimsuit" />
+    </p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  import AddToCart from '../components/AddToCart.vue'
+  import TheCart from '../components/TheCart'
 
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  export default {
+    components: {TheCart, AddToCart}
   }
-}
 </script>
+
+<style scoped>
+
+</style>
