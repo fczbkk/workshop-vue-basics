@@ -18,9 +18,6 @@ export default new Vuex.Store({
       }
     }
   },
-  actions: {
-
-  },
   getters: {
     countProducts (state) {
       return Object.keys(state.itemsInCart).length
