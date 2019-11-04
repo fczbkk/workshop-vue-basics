@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "name": "vue-ssr-example",
+  "dependencies": {
+    "express": "^4.17.1",
+    "vue": "^2.6.10",
+    "vue-server-renderer": "^2.6.10"
+  }
+}
