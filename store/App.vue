@@ -2,7 +2,6 @@
   <div id="app">
     <the-cart />
     <add-to-cart product-id="first" />
-    <add-to-cart product-id="first" />
     <add-to-cart product-id="second" />
     <add-to-cart product-id="third" />
   </div>
@@ -23,4 +22,9 @@ export default {
 </script>
 
 <style>
+  body {
+    font-family: sans-serif;
+    line-height: 1.5em;
+    padding: 3em;
+  }
 </style>

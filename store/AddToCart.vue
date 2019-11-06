@@ -1,13 +1,18 @@
 <template>
-  <div>
-    {{ productId }}:
+  <p>
+    Product: {{ productId }}<br>
     <button @click="count--">-</button>
-    <input type="text" v-model.number="count">
+    <input type="text" v-model.number="count" size="3">
     <button @click="count++">+</button>
-  </div>
+  </p>
 </template>
 
 <script>
+
+  import {
+    COUNT_PRODUCT_ITEMS,
+    SET_CART_ITEM_QUANTITY
+  } from './store-properties'
 
   export default {
     props: {
@@ -19,10 +24,10 @@
     computed: {
       count: {
         get () {
-          return this.$store.state.itemsInCart[this.productId] || 0
+          return this.$store.getters[COUNT_PRODUCT_ITEMS](this.productId)
         },
         set (newValue) {
-          this.$store.commit('setCartItemQuantity', {
+          this.$store.commit(SET_CART_ITEM_QUANTITY, {
             productId: this.productId,
             quantity: newValue
           })

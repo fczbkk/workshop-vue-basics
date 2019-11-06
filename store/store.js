@@ -27,6 +27,11 @@ export default new Vuex.Store({
         (accumulated, current) => current + accumulated,
         0
       )
+    },
+    countProductItems (state) {
+      return function (productId) {
+        return state.itemsInCart[productId] || 0
+      }
     }
   }
 })
