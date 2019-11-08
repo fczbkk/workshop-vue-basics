@@ -1,7 +1,12 @@
 <template>
   <div>
+    <h1>Async</h1>
     <async-component />
+
+    <h1>Delayed</h1>
     <delayed-component />
+
+    <h1>Delayed with indicator</h1>
     <delayed-component-with-indicator />
   </div>
 </template>
