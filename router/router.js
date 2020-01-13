@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
 import Product from './views/Product.vue'
-import AsyncPage from './views/AsyncPage.vue'
 import Error404 from './views/Error404.vue'
 
 Vue.use(VueRouter)
@@ -16,7 +15,7 @@ const routes = [
   {
     path: '/async',
     name: 'async',
-    component: AsyncPage
+    component: () => import('./views/AsyncPage.vue')
   },
   {
     path: '/product-detail/:product_id',
