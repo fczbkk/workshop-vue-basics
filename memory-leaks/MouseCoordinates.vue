@@ -21,10 +21,10 @@
       }
     },
     mounted () {
-      window.addEventListener('mousemove', this.handleMouseMove)
+      document.body.addEventListener('mousemove', this.handleMouseMove)
     },
     destroyed () {
-      window.removeEventListener('mousemove', this.handleMouseMove)
+      document.body.removeEventListener('mousemove', this.handleMouseMove)
     }
   }
 </script>
