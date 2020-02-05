@@ -13,6 +13,7 @@ npm install
 Najjednoduchší spôsob, ako spustiť ukážky, je použiť `vue serve`. Nainštalujte si globálne tento balíček:
 
 ```
+npm install -g @vue/cli
 npm install -g @vue/cli-service-global
 ```
 
