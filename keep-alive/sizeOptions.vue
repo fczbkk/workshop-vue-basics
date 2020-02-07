@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Color</h2>
+    <h2>Size</h2>
     <ul>
       <li v-for="size in sizes" :key="size">
         <label>
