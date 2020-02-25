@@ -8,12 +8,6 @@
 </template>
 
 <script>
-
-  import {
-    COUNT_PRODUCT_ITEMS,
-    SET_CART_ITEM_QUANTITY
-  } from './store-properties'
-
   export default {
     props: {
       productId: {
@@ -24,10 +18,10 @@
     computed: {
       count: {
         get () {
-          return this.$store.getters[COUNT_PRODUCT_ITEMS](this.productId)
+          return this.$store.getters.countProductItems(this.productId)
         },
         set (newValue) {
-          this.$store.commit(SET_CART_ITEM_QUANTITY, {
+          this.$store.commit('setCartItemQuantity', {
             productId: this.productId,
             quantity: newValue
           })

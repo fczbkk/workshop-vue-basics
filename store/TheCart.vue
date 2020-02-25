@@ -7,18 +7,13 @@
 </template>
 
 <script>
-  import {
-    COUNT_ITEMS,
-    COUNT_PRODUCTS
-  } from './store-properties'
-
   export default {
     computed: {
       countProducts () {
-        return this.$store.getters[COUNT_PRODUCTS]
+        return this.$store.getters.countProducts
       },
       countItems () {
-        return this.$store.getters[COUNT_ITEMS]
+        return this.$store.getters.countItems
       }
     }
   }
