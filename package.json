@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "remark": "^11.0.1",
     "remark-html": "^10.0.0",
     "sass-loader": "^8.0.0",
